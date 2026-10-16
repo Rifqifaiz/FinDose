@@ -1,0 +1,21 @@
+{
+  "name": "findose",
+  "version": "1.0.0",
+  "description": "FinDose - Financial Dosage for Sickness and Emergency",
+  "main": "backend/src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "dev": "node --watch backend/src/server.js"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "keywords": [
+    "findose",
+    "health",
+    "finance",
+    "pwa"
+  ],
+  "license": "MIT"
+}

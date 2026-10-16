@@ -1,0 +1,14 @@
+# Jangan pernah masuk ke image: berisi kunci rahasia / data lokal
+.env
+**/.env
+ai_bridge.py
+__pycache__
+*.db
+*.db-*
+backup
+node_modules
+plans
+CLAUDE.md
+**/CLAUDE.md
+**/test
+.git

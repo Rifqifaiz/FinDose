@@ -1,0 +1,12 @@
+{
+  "name": "FinDose",
+  "short_name": "FinDose",
+  "description": "Kantong dana sehat & prediksi risiko kesehatan preventif untuk mahasiswa.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#edf3f2",
+  "theme_color": "#008a92",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: findose
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: ""
+    startCommand: node backend/src/server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ENABLE_DEMO
+        value: "true"

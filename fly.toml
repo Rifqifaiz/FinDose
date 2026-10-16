@@ -1,0 +1,38 @@
+# Konfigurasi Fly.io. Ganti `app` bila nama "findose" sudah dipakai orang lain.
+app = "findose"
+primary_region = "sin"   # Singapura, terdekat dari Indonesia
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  NODE_ENV = "production"
+  PORT = "8080"
+  FINDOSE_DB = "/data/findose.db"
+  ENABLE_DEMO = "true"    # tombol "Coba akun demo"; set "false" untuk pengguna umum
+  AUTH_PROVIDER = "local"
+  # Rahasia (GEMINI_API_KEY, dsb.) JANGAN ditaruh di sini: pakai `fly secrets set`
+
+# SQLite membutuhkan disk persisten. Buat dulu: fly volumes create findose_data --region sin --size 1
+[[mounts]]
+  source = "findose_data"
+  destination = "/data"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"    # hemat biaya; mesin menyala lagi otomatis saat ada pengunjung
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [[http_service.checks]]
+    grace_period = "10s"
+    interval = "30s"
+    method = "GET"
+    path = "/api/health"
+    timeout = "5s"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "256mb"

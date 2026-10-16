@@ -1,0 +1,11 @@
+.env
+**/.env
+node_modules/
+*.db
+*.db-*
+__pycache__/
+.DS_Store
+
+# Berisi API key tertulis langsung. Pindahkan key ke environment variable sebelum di-commit.
+ai_bridge.py
+backend/backup/

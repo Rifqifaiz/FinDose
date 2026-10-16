@@ -1,0 +1,23 @@
+{
+  "name": "findose-backend",
+  "version": "2.0.0",
+  "description": "REST API Backend Service for FinDose - Financial Dosage for Sickness and Emergency",
+  "main": "src/server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=24.2"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/**/*.test.js"
+  },
+  "keywords": [
+    "findose",
+    "micro-budgeting",
+    "preventative-health",
+    "api"
+  ],
+  "author": "FinDose Team",
+  "license": "MIT"
+}
