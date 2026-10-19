@@ -92,15 +92,17 @@ Terakhir diperbarui: 16 Oktober 2026
 
 ---
 
-## 5. Public Live Deployment (Akses Internet Bebas)
-
-- [x] **Tunnel Publik HTTPS Aktif**
-  - **Live URL**: `https://gsfnj-152-118-150-232.run.pinggy-free.link`
-  - URL Cadangan: `https://msgwx-152-118-150-232.free.pinggy.net`
-  - Mendukung HTTPS otomatis, aman dibuka dari browser HP maupun laptop tanpa perlu install apapun.
-- [x] **Script Peluncur Publik Otomatis**
-  - File: [start-public.sh](file:///Users/rifqi/Documents/FinDose/start-public.sh)
-  - Cukup jalankan `./start-public.sh` dari terminal untuk membuka kembali link publik kapanpun Anda inginkan.
+## 5. Public Live Deployment
+- [x] **Tunnel Sementara Aktif**: `https://gsfnj-152-118-150-232.run.pinggy-free.link` (Aktif via script [start-public.sh](file:///Users/rifqi/Documents/FinDose/start-public.sh)).
+- [x] **Persiapan Repository Git Lokal**:
+  - `git init` selesai.
+  - Komit perdana (`feat: initial commit of FinDose fullstack application`) selesai.
+  - File rahasia (`.env`, `ai_bridge.py`, `*.db`) sudah aman dikecualikan via `.gitignore`.
+  - Konfigurasi Render otomatis siap di [render.yaml](file:///Users/rifqi/Documents/FinDose/render.yaml) & [package.json](file:///Users/rifqi/Documents/FinDose/package.json).
+- [ ] **Push ke GitHub & Deploy Permanen ke Render.com**:
+  - Buat repo `FinDose` di GitHub.
+  - Push kode via terminal (`git push -u origin main`).
+  - Sambungkan repo di Render.com untuk menerbitkan link permanen `https://findose.onrender.com`.
 
 ---
 
@@ -113,15 +115,4 @@ Terakhir diperbarui: 16 Oktober 2026
 - [ ] **Sinkronisasi Desain Visual ke Stitch**
   - Gunakan skill `code-to-design` untuk backup atau iterasi visual di Google Stitch.
 
----
-
-## 🚀 Cara Membagikan Link FinDose ke Pengguna / Penguji
-
-Bagikan link berikut ke siapa pun yang ingin mencoba FinDose:
-👉 **https://gsfnj-152-118-150-232.run.pinggy-free.link**
-
-Untuk menyalakan ulang tunnel di kemudian hari:
-```bash
-./start-public.sh
-```
 
