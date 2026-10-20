@@ -51,7 +51,7 @@
     <!-- Vertical Spine passing through center x=256 -->
     <line x1="256" y1="126" x2="256" y2="242"
           stroke="#ffffff"
-          stroke-width="20"
+          stroke-width="13"
           stroke-linecap="round" />
 
     <!-- Smooth S Curve of $ -->
@@ -63,7 +63,7 @@
              C 238 234 228 226 228 208"
           fill="none"
           stroke="#ffffff"
-          stroke-width="21"
+          stroke-width="13"
           stroke-linecap="round"
           stroke-linejoin="round" />
   </g>
